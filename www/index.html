@@ -76,9 +76,9 @@
 
         function deleteData() {
             UTdata.fetch()
-            .then(function(results) {
-                return results.delete();
-            })
+                .then(function(results) {
+                    return results.delete();
+                })
                 .then(function(results) {
                     $("#display").removeClass();
                     $("#display").addClass("text-light");
@@ -90,8 +90,6 @@
                     $("#display").addClass("bg-warning");
                     $("#display").html("delete fail:" + JSON.stringify(error));
                 })
-        }
-            $("#display").html("delete does not work");
         }
 
         function updateData() {
